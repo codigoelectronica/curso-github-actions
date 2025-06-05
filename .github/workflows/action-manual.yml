@@ -30,7 +30,7 @@ jobs:
       # Creamos la rama de version para main
       - name: Release
         run: |
-          new_version="Release_v${{ github.event.inputs.version }}"
+          version="Release_v${{ github.event.inputs.version }}"
           echo "Creamos la rama $version desde origin/main"
           git checkout -b "$version" "origin/main"
           git push origin "$version"
